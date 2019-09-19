@@ -11,7 +11,11 @@ spf_checker.sh is a KornShell script for Linux systems.
 
 ## Notes
 ASCII text email messages will be checked automatically.
+
 Outlook emails (MSG) needs to be converted with a script found here:
-https://www.matijs.net/software/msgconv/
+
+- https://www.matijs.net/software/msgconv/
+
+
 Pre-requisites:
-  cpan -i Email::Outlook::Message
+- cpan -i Email::Outlook::Message
