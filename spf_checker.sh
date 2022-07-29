@@ -229,7 +229,7 @@ function zz_extract_return_path {
       ZZ_EMAIL_RPATH=$(grep -i "return-path" $ZZ_EMAIL_FILE | tail -1 | perl -ne "print $a /Return-Path:\s*\<\S+@(\S+\.\w+)\>/")
     ;;
   esac
-	print_msg "INFO" "Return-Path: $ZZ_EMAIL_RPATH"
+  print_msg "INFO" "Return-Path: $ZZ_EMAIL_RPATH"
 }
 
 ##############################################################################
@@ -282,7 +282,7 @@ function zz_extract_from {
 ##############################################################################
 function zz_convert_outlook {
   which msgconvert > /dev/null
-	if [[ $? == 0 ]]; then
+  if [[ $? == 0 ]]; then
     ZZ_EMAIL_FILE_CONVERTED=$(echo $ZZ_EMAIL_FILE | perl -ne "print $a /\S+\/(\S+)/").spfchecker
     print_msg "INFO" "Converting Outlook email to text..."
     msgconvert --outfile $ZZ_WORKING_DIR/$ZZ_EMAIL_FILE_CONVERTED $ZZ_EMAIL_FILE
@@ -367,7 +367,7 @@ if [[ $ZZ_ACTIVE_LOGGING == 1 ]]; then
   # start logging
   log_script_verbose $ZZ_SPFCHECKER_LOG
 else
-    print_msg "INFO" "Script started"
+  print_msg "INFO" "Script started"
 fi
 
 
@@ -378,7 +378,7 @@ if [[ ! -z $ZZ_EMAIL_FILE ]]; then
   zz_extract_from $ZZ_EXTRACT_OPTS
 else
   zz_find_rfrom_ip
-	print_msg "INFO" "Return-Path: $ZZ_EMAIL_RPATH"
+  print_msg "INFO" "Return-Path: $ZZ_EMAIL_RPATH"
   print_msg "INFO" "Declared mail from: $ZZ_EMAIL_RFROM"
   print_msg "INFO" "Declared server IP is $ZZ_EMAIL_RFROM_IP"
   print_msg "INFO" "Declared From: $ZZ_EMAIL_FROM"
