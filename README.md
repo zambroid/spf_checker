@@ -13,7 +13,7 @@ spf_checker.sh is a KornShell script for Linux systems.
 ````
 Purpose : Check SPF validity of receive email message
 
-Usage   : spf_checker.sh -f <EMAIL_FILE>
+Usage   : spf_checker.ksh -f <EMAIL_FILE>
           -f absolute path of the import file
           -from displayed email address
           -rpath return-path contained in email
@@ -21,9 +21,9 @@ Usage   : spf_checker.sh -f <EMAIL_FILE>
           -log activate file logging - all output saved to a log file
           -h display usage help
 
-Example : spf_checker.sh -f /home/username/Downloads/email_message.msg
-          spf_checker.sh -from "user@example.com" -rpath "user2@example.com" -rfrom "mailserver.example.com"
-          spf_checker.sh -f /home/username/Downloads/email_message.msg -log
+Example : spf_checker.ksh -f /home/username/Downloads/email_message.msg
+          spf_checker.ksh -from "user@example.com" -rpath "user2@example.com" -rfrom "mailserver.example.com"
+          spf_checker.ksh -f /home/username/Downloads/email_message.msg -log
 ````
 
 ## Notes
