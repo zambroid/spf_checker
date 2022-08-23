@@ -170,7 +170,7 @@ function usage_message {
  
   if [[ -n "$1" ]]; then
     print
-    print "Command : spf_checker.sh $ZZ_ARGS"
+    print "Command : spf_checker.ksh $ZZ_ARGS"
     print
     print "Error   : $1"
   fi
@@ -180,7 +180,7 @@ function usage_message {
   print
   print "Purpose : Check SPF validity of receive email message"
   print
-  print "Usage   : spf_checker.sh -f <EMAIL_FILE> "
+  print "Usage   : spf_checker.ksh -f <EMAIL_FILE> "
   print "          -f absolute path of the import file"
   print "          -from displayed email address"
   print "          -rpath return-path contained in email"
@@ -188,9 +188,9 @@ function usage_message {
   print "          -log activate file logging - all output saved to a log file"
   print "          -h display usage help"
   print
-  print "Example : spf_checker.sh -f /home/username/Downloads/email_message.msg"
-  print "          spf_checker.sh -from \"user@example.com\" -rpath \"user2@example.com\" -rfrom \"mailserver.example.com\" "
-  print "          spf_checker.sh -f /home/username/Downloads/email_message.msg -log"
+  print "Example : spf_checker.ksh -f /home/username/Downloads/email_message.msg"
+  print "          spf_checker.ksh -from \"user@example.com\" -rpath \"user2@example.com\" -rfrom \"mailserver.example.com\" "
+  print "          spf_checker.ksh -f /home/username/Downloads/email_message.msg -log"
   print
   print
  
